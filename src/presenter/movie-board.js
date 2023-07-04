@@ -10,11 +10,25 @@ export default class MovieBord {
 
     this._movieComponent = new MovieBordView();
     this._movieListComponent = new MovieListView();
+    this._showMoreButtonView = new ShowMoreButtonView();
   }
 
   init() {
-    render(this._boardContainer, this._movieComponent, RenderPosition.BEFOREEND);
-    render(this._movieComponent, this._movieListComponent, RenderPosition.BEFOREEND);
+    render(
+      this._boardContainer,
+      this._movieComponent,
+      RenderPosition.BEFOREEND
+    );
+    render(
+      this._movieComponent,
+      this._showMoreButtonView,
+      RenderPosition.BEFOREEND
+    );
+    render(
+      this._movieComponent,
+      this._movieListComponent,
+      RenderPosition.BEFOREEND
+    );
 
     // this._tasksModel.addObserver(this._handleModelEvent);
     // this._filterModel.addObserver(this._handleModelEvent);
