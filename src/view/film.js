@@ -1,27 +1,25 @@
 import AbstractView from "./abstract.js";
 
-const createMovieTemplate = (film) => {
-  const { title, isFavorite } = film;
+const createMovieTemplate = (film_info) => {
+  const { title, total_rating,  isFavorite } = film_info; 
+
+
 
   const activeClassName = (name) => {
     return name ? "film-card__controls-item--active" : "";
   };
 
   return `<article class="film-card">
-        <h3 class="film-card__title">${title}</h3>
-        <p class="film-card__rating">8.3</p>
+        <h3 class="film-card__title">${film_info.title}</h3>
+        <p class="film-card__rating">${title}</p>
         <p class="film-card__info">
-          <span class="film-card__year">1929</span>
-          <span class="film-card__duration">1h 55m</span>
-          <span class="film-card__genre">Musical</span>
+          <span class="film-card__year">${title}</span>
+          <span class="film-card__duration">${title}</span>
+          <span class="film-card__genre">${title}</span>
         </p>
         <img src="./images/posters/the-dance-of-life.jpg" alt="" class="film-card__poster">
-        <p class="film-card__description">
-          Burlesque comic Ralph "Skid" Johnson (Skelly), and specialty
-          dancer Bonny Lee King (Carroll), end up together on a cold,
-          rainy night at a tr…
-        </p>
-        <a class="film-card__comments">5 comments</a>
+        <p class="film-card__description">${title}</p>
+        <a class="film-card__comments">${title}s</a>
         <div class="film-card__controls">
           <button class="film-card__controls-item button film-card__controls-item--add-to-watchlist" type="button">
             Add to watchlist
